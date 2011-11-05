@@ -32,7 +32,7 @@ if exists("loaded_v1m")
 endif
 let loaded_v1m = 1
 
-" Function: s:FullToHalf {{{2
+" Function: FullToHalf
 " Convert full-width characters to half-width characters
 function! FullToHalf()
   s/０/0/gie
@@ -99,4 +99,11 @@ function! FullToHalf()
   s/ｚ/z/gie
 endfunction
 
+" Function: ReopenAsShiftJIS
+" Reopen the saved file as Shift-JIS
+function! ReopenAsShiftJIS()
+  e ++enc=sjis
+endfunction
+
 nmap <silent> ;1fh :call FullToHalf()<CR>
+nmap <silent> ;1ej :call ReopenAsShiftJIS()<CR>
