@@ -99,6 +99,7 @@ function! FullToHalf()
   s/z/ｚ/gi
   s/（/ (/gi
   s/）/ )/gi
+  s/　/ /gi
 endfunction
 
 nmap <silent> ;1fh :call FullToHalf()<CR>
