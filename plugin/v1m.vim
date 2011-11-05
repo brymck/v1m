@@ -96,10 +96,7 @@ function! FullToHalf()
   s/Ｙ/Y/gi
   s/ｙ/y/gi
   s/Ｚ/Z/gi
-  s/z/ｚ/gi
-  s/（/ (/gi
-  s/）/ )/gi
-  s/　/ /gi
+  s/ｚ/z/gi
 endfunction
 
 nmap <silent> ;1fh :call FullToHalf()<CR>
