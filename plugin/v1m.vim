@@ -34,4 +34,8 @@ let loaded_v1m = 1
 
 " Function: s:FullToHalf {{{2
 " Convert full-width characters to half-width characters
-function s:FullToHalf
+function! FullToHalf()
+  s/０/0/gi
+endfunction
+
+nmap <silent> ;1fh :call FullToHalf()<CR>
