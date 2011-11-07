@@ -32,71 +32,77 @@ if exists("loaded_v1m")
 endif
 let loaded_v1m = 1
 
+" Function: ReplaceFromDictionary
+" Replaces all words in a file from a tab-delimited dictionary
+function! ReplaceFromDictionary()
+
+endfunction
+
 " Function: FullToHalf
 " Convert full-width characters to half-width characters
 function! FullToHalf()
-  s/０/0/gie
-  s/１/1/gie
-  s/２/2/gie
-  s/３/3/gie
-  s/４/4/gie
-  s/５/5/gie
-  s/６/6/gie
-  s/７/7/gie
-  s/８/8/gie
-  s/９/9/gie
-  s/Ａ/A/gie
-  s/ａ/a/gie
-  s/Ｂ/B/gie
-  s/ｂ/b/gie
-  s/Ｃ/C/gie
-  s/ｃ/c/gie
-  s/Ｄ/D/gie
-  s/ｄ/d/gie
-  s/Ｅ/E/gie
-  s/ｅ/e/gie
-  s/Ｆ/F/gie
-  s/ｆ/f/gie
-  s/Ｇ/G/gie
-  s/ｇ/g/gie
-  s/Ｈ/H/gie
-  s/ｈ/h/gie
-  s/Ｉ/I/gie
-  s/ｉ/i/gie
-  s/Ｊ/J/gie
-  s/ｊ/j/gie
-  s/Ｋ/K/gie
-  s/ｋ/k/gie
-  s/Ｌ/L/gie
-  s/ｌ/l/gie
-  s/Ｍ/M/gie
-  s/ｍ/m/gie
-  s/Ｎ/N/gie
-  s/ｎ/n/gie
-  s/Ｏ/O/gie
-  s/ｏ/o/gie
-  s/Ｐ/P/gie
-  s/ｐ/p/gie
-  s/Ｑ/Q/gie
-  s/ｑ/q/gie
-  s/Ｒ/R/gie
-  s/ｒ/r/gie
-  s/Ｓ/S/gie
-  s/ｓ/s/gie
-  s/Ｔ/T/gie
-  s/ｔ/t/gie
-  s/Ｕ/U/gie
-  s/ｕ/u/gie
-  s/Ｖ/V/gie
-  s/ｖ/v/gie
-  s/Ｗ/W/gie
-  s/ｗ/w/gie
-  s/Ｘ/X/gie
-  s/ｘ/x/gie
-  s/Ｙ/Y/gie
-  s/ｙ/y/gie
-  s/Ｚ/Z/gie
-  s/ｚ/z/gie
+  %s/０/0/ge
+  %s/１/1/ge
+  %s/２/2/ge
+  %s/３/3/ge
+  %s/４/4/ge
+  %s/５/5/ge
+  %s/６/6/ge
+  %s/７/7/ge
+  %s/８/8/ge
+  %s/９/9/ge
+  %s/Ａ/A/ge
+  %s/ａ/a/ge
+  %s/Ｂ/B/ge
+  %s/ｂ/b/ge
+  %s/Ｃ/C/ge
+  %s/ｃ/c/ge
+  %s/Ｄ/D/ge
+  %s/ｄ/d/ge
+  %s/Ｅ/E/ge
+  %s/ｅ/e/ge
+  %s/Ｆ/F/ge
+  %s/ｆ/f/ge
+  %s/Ｇ/G/ge
+  %s/ｇ/g/ge
+  %s/Ｈ/H/ge
+  %s/ｈ/h/ge
+  %s/Ｉ/I/ge
+  %s/ｉ/i/ge
+  %s/Ｊ/J/ge
+  %s/ｊ/j/ge
+  %s/Ｋ/K/ge
+  %s/ｋ/k/ge
+  %s/Ｌ/L/ge
+  %s/ｌ/l/ge
+  %s/Ｍ/M/ge
+  %s/ｍ/m/ge
+  %s/Ｎ/N/ge
+  %s/ｎ/n/ge
+  %s/Ｏ/O/ge
+  %s/ｏ/o/ge
+  %s/Ｐ/P/ge
+  %s/ｐ/p/ge
+  %s/Ｑ/Q/ge
+  %s/ｑ/q/ge
+  %s/Ｒ/R/ge
+  %s/ｒ/r/ge
+  %s/Ｓ/S/ge
+  %s/ｓ/s/ge
+  %s/Ｔ/T/ge
+  %s/ｔ/t/ge
+  %s/Ｕ/U/ge
+  %s/ｕ/u/ge
+  %s/Ｖ/V/ge
+  %s/ｖ/v/ge
+  %s/Ｗ/W/ge
+  %s/ｗ/w/ge
+  %s/Ｘ/X/ge
+  %s/ｘ/x/ge
+  %s/Ｙ/Y/ge
+  %s/ｙ/y/ge
+  %s/Ｚ/Z/ge
+  %s/ｚ/z/ge
 endfunction
 
 " Function: ReopenAsShiftJIS
