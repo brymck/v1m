@@ -38,9 +38,9 @@ function! ReplaceFromDictionary()
 
 endfunction
 
-" Function: FullToHalf
-" Convert full-width characters to half-width characters
-function! FullToHalf()
+" Function: FullToHalfAll
+" Convert all full-width characters to half-width characters
+function! FullToHalfAll()
   %s/０/0/ge
   %s/１/1/ge
   %s/２/2/ge
@@ -105,11 +105,79 @@ function! FullToHalf()
   %s/ｚ/z/ge
 endfunction
 
+" Function: FullToHalf
+" Convert full-width characters to half-width characters
+function! FullToHalf()
+  s/０/0/ge
+  s/１/1/ge
+  s/２/2/ge
+  s/３/3/ge
+  s/４/4/ge
+  s/５/5/ge
+  s/６/6/ge
+  s/７/7/ge
+  s/８/8/ge
+  s/９/9/ge
+  s/Ａ/A/ge
+  s/ａ/a/ge
+  s/Ｂ/B/ge
+  s/ｂ/b/ge
+  s/Ｃ/C/ge
+  s/ｃ/c/ge
+  s/Ｄ/D/ge
+  s/ｄ/d/ge
+  s/Ｅ/E/ge
+  s/ｅ/e/ge
+  s/Ｆ/F/ge
+  s/ｆ/f/ge
+  s/Ｇ/G/ge
+  s/ｇ/g/ge
+  s/Ｈ/H/ge
+  s/ｈ/h/ge
+  s/Ｉ/I/ge
+  s/ｉ/i/ge
+  s/Ｊ/J/ge
+  s/ｊ/j/ge
+  s/Ｋ/K/ge
+  s/ｋ/k/ge
+  s/Ｌ/L/ge
+  s/ｌ/l/ge
+  s/Ｍ/M/ge
+  s/ｍ/m/ge
+  s/Ｎ/N/ge
+  s/ｎ/n/ge
+  s/Ｏ/O/ge
+  s/ｏ/o/ge
+  s/Ｐ/P/ge
+  s/ｐ/p/ge
+  s/Ｑ/Q/ge
+  s/ｑ/q/ge
+  s/Ｒ/R/ge
+  s/ｒ/r/ge
+  s/Ｓ/S/ge
+  s/ｓ/s/ge
+  s/Ｔ/T/ge
+  s/ｔ/t/ge
+  s/Ｕ/U/ge
+  s/ｕ/u/ge
+  s/Ｖ/V/ge
+  s/ｖ/v/ge
+  s/Ｗ/W/ge
+  s/ｗ/w/ge
+  s/Ｘ/X/ge
+  s/ｘ/x/ge
+  s/Ｙ/Y/ge
+  s/ｙ/y/ge
+  s/Ｚ/Z/ge
+  s/ｚ/z/ge
+endfunction
+
 " Function: ReopenAsShiftJIS
 " Reopen the saved file as Shift-JIS
 function! ReopenAsShiftJIS()
   e ++enc=sjis
 endfunction
 
+nmap <silent> ;1%fh :call FullToHalfAll()<CR>
 nmap <silent> ;1fh :call FullToHalf()<CR>
 nmap <silent> ;1ej :call ReopenAsShiftJIS()<CR>
