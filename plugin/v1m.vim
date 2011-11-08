@@ -178,6 +178,6 @@ function! ReopenAsShiftJIS()
   e ++enc=sjis
 endfunction
 
-nmap <silent> ;1%fh :call FullToHalfAll()<CR>
+nmap <silent> ;1afh :call FullToHalfAll()<CR>
 nmap <silent> ;1fh :call FullToHalf()<CR>
 nmap <silent> ;1ej :call ReopenAsShiftJIS()<CR>
