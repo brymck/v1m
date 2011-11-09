@@ -1,2 +1,2 @@
-:syn match header /^[-]{4}\szen\s[\d]+\,[\d]+$/
-hi link header Error
+:syn match header /^---- zen \d*,\d*$/
+hi link header Comment
