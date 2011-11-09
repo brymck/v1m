@@ -6,8 +6,8 @@ if !exists("main_syntax")
   let main_syntax = 'v1m'
 endif
 
-syn match header /^---- zen \d*,\d*$/
-hi def link header Comment
+syn match header /^---- v1m \d*,\d*$/
+hi link header Comment
 
 let b:current_syntax = "v1m"
 
