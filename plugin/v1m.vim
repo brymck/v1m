@@ -173,11 +173,11 @@ function! FullToHalf()
 endfunction
 
 function! HighlightSimplyTerms()
-  syn match bd_header /\\[\\[BD-\d+\\]\\]/
-  syn match bd_unicode /[^\u800-\uffff]/
+  :syn match bd_header /\[\[BD-\d+\]\]/
+  :syn match bd_unicode /[^\x800-\xffff]/
 
-  hi link bd_header Comment
-  hi link bd_unicode Type
+  :hi link bd_header Comment
+  :hi link bd_unicode String
 endfunction
 
 " Function: ReopenAsShiftJIS
