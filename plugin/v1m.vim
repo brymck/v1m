@@ -173,7 +173,7 @@ function! FullToHalf()
 endfunction
 
 function! HighlightSimplyTerms()
-  :syn match bd_header /\[\[BD-\d+\]\]/
+  :syn match bd_header /\[\[BD-\d*\]\]/
   :syn match bd_unicode /[^\x800-\xffff]/
 
   :hi link bd_header Comment
