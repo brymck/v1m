@@ -172,6 +172,14 @@ function! FullToHalf()
   s/ｚ/z/ge
 endfunction
 
+function! HighlightSimplyTerms()
+  syn match bd_header /\\[\\[BD-\d+\\]\\]/
+  syn match bd_unicode /[^\u800-\uffff]/
+
+  hi link bd_header Comment
+  hi link bd_unicode Type
+endfunction
+
 " Function: ReopenAsShiftJIS
 " Reopen the saved file as Shift-JIS
 function! ReopenAsShiftJIS()
@@ -181,3 +189,4 @@ endfunction
 nmap <silent> ;1afh :call FullToHalfAll()<CR>
 nmap <silent> ;1fh :call FullToHalf()<CR>
 nmap <silent> ;1ej :call ReopenAsShiftJIS()<CR>
+nmap <silent> ;hst :call HighlightSimplyTerms()<CR>
