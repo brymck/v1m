@@ -185,3 +185,27 @@ endfunction
 function! ReopenAsShiftJIS()
   e ++enc=sjis
 endfunction
+
+" Function: Extract Tags (Word)
+" Extract tags from Microsoft Word for Mac
+function! ExtractTagsWord()
+  :!osascript "$HOME/Library/Scripts/Extract Tags (Word).scpt"
+endfunction
+
+" Function: Extract Tags (PowerPoint)
+" Extract tags from Microsoft PowerPoint for Mac
+function! ExtractTagsPowerPoint()
+  :!osascript "$HOME/Library/Scripts/Extract Tags (PowerPoint).scpt"
+endfunction
+
+" Function: Import Tags (Word)
+" Import tags into Microsoft Word for Mac
+function! ImportTagsWord()
+  :!osascript "$HOME/Library/Scripts/Import Tags (Word).scpt"
+endfunction
+
+" Function: Extract Tags (Word)
+" Import tags into Microsoft PowerPoint for Mac
+function! ImportTagsPowerPoint()
+  :!osascript "$HOME/Library/Scripts/Import Tags (PowerPoint).scpt"
+endfunction
