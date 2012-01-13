@@ -172,11 +172,13 @@ function! FullToHalf()
   s/ｚ/z/ge
 endfunction
 
-function! HighlightSimplyTerms()
-  :syn match bd_header /\[\[BD-\d*\]\]/
-  :syn match bd_unicode /[^\x800-\xffff]/
+function! HighlightTerms()
+  :syn match bd_header /\v^\[\[(BD|KJ)-\d*\]\]/
+  :syn match bd_orig /\v^>\s.*$/
+  :syn match bd_unicode /\v[^\x800-\xffff]/
 
-  :hi link bd_header Comment
+  :hi link bd_header Type
+  :hi link bd_orig Comment
   :hi link bd_unicode String
 endfunction
 
