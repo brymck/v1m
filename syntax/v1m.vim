@@ -7,8 +7,8 @@ if !exists("main_syntax")
 endif
 
 syn match header /^---- v1m \d*,\d*$/
-syn match term_comment /\v^\[\[KJ-\d*\]\]  # >+$/
-syn match term_header /\v^\[\[(BD|KJ)-\d*\]\]/
+syn match term_comment /\v^\[\[KJ-\d+\]\]  # .*$/
+syn match term_header /\v^\[\[(BD|KJ)-\d+\]\]/
 syn match term_orig /\v^\>\s.*$/
 syn match term_unicode /\v[^\x800-\xffff]/
 
