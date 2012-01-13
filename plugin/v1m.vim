@@ -174,11 +174,13 @@ endfunction
 
 function! HighlightTerms()
   :syn match bd_header /\v^\[\[(BD|KJ)-\d*\]\]/
-  :syn match bd_orig /\v^>\s.*$/
+  :syn match bd_orig /\v^\>\s.*$/
+  :syn match bd_comment /\v^\[\[KJ-\d*\]\]  \zs#.*$/
   :syn match bd_unicode /\v[^\x800-\xffff]/
 
   :hi link bd_header Type
   :hi link bd_orig Comment
+  :hi link bd_comment Comment
   :hi link bd_unicode String
 endfunction
 
